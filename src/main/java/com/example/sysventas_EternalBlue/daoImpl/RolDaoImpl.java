@@ -32,7 +32,7 @@ public class RolDaoImpl implements RolDao{
 	@Override
 	public int delete(int id) {
 		// TODO Auto-generated method stub
-		String sql= "delete rol where idrol=?";
+		String sql= "delete from rol where idrol=?";
 		return jdbcTemplate.update(sql,id);
 	}
 
@@ -40,7 +40,6 @@ public class RolDaoImpl implements RolDao{
 	public Rol read(int id) {
 		// TODO Auto-generated method stub
 		String sql = "select * from rol where idrol=?";
-		
 		return jdbcTemplate.queryForObject(sql, Rol.class);
 	}
 
