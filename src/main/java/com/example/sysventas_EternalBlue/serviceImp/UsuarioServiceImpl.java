@@ -4,36 +4,36 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.example.sysventas_EternalBlue.dao.RolDao;
-import com.example.sysventas_EternalBlue.entity.Rol;
-import com.example.sysventas_EternalBlue.service.RolService;
-
+import com.example.sysventas_EternalBlue.dao.UsuarioDao;
+import com.example.sysventas_EternalBlue.entity.Usuario;
+import com.example.sysventas_EternalBlue.service.UsuarioService;
 @Service
-public class RolServiceImpl implements RolService {
+public class UsuarioServiceImpl implements UsuarioService {
 @Autowired
-private RolDao roldao;
+	private UsuarioDao usuariodao;
 	@Override
-	public int create(Rol r) {
+	public int create(Usuario u) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int update(Rol r) {
+	public int update(Usuario u) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int delete(Rol r) {
+	public int delete(Usuario u) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public Rol read(int id) {
+	public Usuario read(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -41,7 +41,7 @@ private RolDao roldao;
 	@Override
 	public List<Map<String, Object>> readAll() {
 		// TODO Auto-generated method stub
-		return roldao.readAll();
+		return usuariodao.readAll();
 	}
 
 }

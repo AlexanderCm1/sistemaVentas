@@ -6,34 +6,34 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.sysventas_EternalBlue.dao.RolDao;
-import com.example.sysventas_EternalBlue.entity.Rol;
-import com.example.sysventas_EternalBlue.service.RolService;
-
+import com.example.sysventas_EternalBlue.dao.UsuarioDao;
+import com.example.sysventas_EternalBlue.dao.VentasDao;
+import com.example.sysventas_EternalBlue.entity.Ventas;
+import com.example.sysventas_EternalBlue.service.VentasService;
 @Service
-public class RolServiceImpl implements RolService {
+public class VentasServiceImpl implements VentasService {
 @Autowired
-private RolDao roldao;
+	private VentasDao ventasdao;
 	@Override
-	public int create(Rol r) {
+	public int create(Ventas v) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int update(Rol r) {
+	public int update(Ventas v) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int delete(Rol r) {
+	public int delete(Ventas v) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public Rol read(int id) {
+	public Ventas read(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -41,7 +41,7 @@ private RolDao roldao;
 	@Override
 	public List<Map<String, Object>> readAll() {
 		// TODO Auto-generated method stub
-		return roldao.readAll();
+		return ventasdao.readAll();
 	}
 
 }
