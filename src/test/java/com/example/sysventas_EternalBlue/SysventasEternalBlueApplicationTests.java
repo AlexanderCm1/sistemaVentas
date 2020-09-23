@@ -26,19 +26,20 @@ class SysventasEternalBlueApplicationTests {
 		Rol r = new Rol();
 		r.setNomrol("Usuario");
 		System.out.println(rolDao.create(r));
-		*/
+	
 		System.out.println(personaDao.readAll());
-		/*
-		Persona p = new Persona(0,"Victor", "Robles", "2501011");
+		
+		Persona p = new Persona(0,"Victor", "Robles", "2405959");
 		System.out.println(personaDao.create(p));
 		*/
-		
+		System.out.println(rolDao.read(2).getNomrol());
+		/*
 		Producto pro = new Producto();
 		pro.setNomprod("Dildo");
 		pro.setPrecio(77.2);
 		pro.setCantidad("22");
 		System.out.println(productoDao.create(pro));
-		
+		*/
 	}
 
 }

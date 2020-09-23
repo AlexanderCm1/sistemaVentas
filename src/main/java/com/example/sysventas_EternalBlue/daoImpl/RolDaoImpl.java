@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -40,7 +41,7 @@ public class RolDaoImpl implements RolDao{
 	public Rol read(int id) {
 		// TODO Auto-generated method stub
 		String sql = "select * from rol where idrol=?";
-		return jdbcTemplate.queryForObject(sql, Rol.class);
+		return jdbcTemplate.queryForObject(sql, new Object[] {id}, new BeanPropertyRowMapper<Rol>(Rol.class));
 	}
 
 	@Override
