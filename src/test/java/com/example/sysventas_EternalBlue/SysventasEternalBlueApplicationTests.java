@@ -16,42 +16,17 @@ import com.example.sysventas_EternalBlue.entity.Ventas;
 @SpringBootTest
 class SysventasEternalBlueApplicationTests {
 	@Autowired
-	//private VentasDao ventasdao;
-	//private RolDao rolDao;
-	//private UsuarioDao usuariodao;
-	private Detalle_ventaDao detalle;
+	
+	private RolDao rolDao;
+	
 	@Test
 	void contextLoads() {
+	
 		//Rol r = new Rol();
-		//r.setNombre("Administrador");
-	//	System.out.println(rolDao.create(r));
+	//	r.setNombre("Gerente");
+		//System.out.println(rolDao.delete(3));
 		
-		//Usuario u = new Usuario();
-		//u.setIdpersona(1);
-		//u.setNomuser("kevinapps");
-		//u.setClave("12345");
-		//u.setEstado("A");
-		//u.setIdrol(1);
-		//System.out.println(usuariodao.create(u));
-		
-		//Ventas v = new Ventas();	
-		//v.setFecha("10/05/1500");
-		//v.setTipodoc("DNI");
-		//v.setNumdoc("544845684");
-		//v.setIdpersona(4);
-		//System.out.println(ventasdao.create(v));
-		
-		Detalle_ventas d = new Detalle_ventas();
-		d.setPrecio(12.0);
-		d.setCantidad(5);
-		d.setSubtotal(11.0);
-		d.setIdventas(1);
-		d.setIdproducto(1);
-		
-		System.out.println(detalle.create(d));
-		
-		
-		
+		System.out.println(rolDao.read(2).getNomrol());
 		
 	}
 

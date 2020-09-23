@@ -2,15 +2,14 @@ package com.example.sysventas_EternalBlue.entity;
 
 public class Rol {
 	private int idrol;
-	private String nombre;
-	public Rol() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Rol(int idrol, String nombre) {
+	private String nomrol;
+	public Rol(int idrol, String nomrol) {
 		super();
 		this.idrol = idrol;
-		this.nombre = nombre;
+		this.nomrol = nomrol;
+	}
+	public Rol() {
+		super();
 	}
 	public int getIdrol() {
 		return idrol;
@@ -18,12 +17,14 @@ public class Rol {
 	public void setIdrol(int idrol) {
 		this.idrol = idrol;
 	}
-	public String getNombre() {
-		return nombre;
+	public String getNomrol() {
+		return nomrol;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNomrol(String nomrol) {
+		this.nomrol = nomrol;
 	}
+	
+
 	
 
 }

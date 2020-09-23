@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.integration.IntegrationProperties.Jdbc;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -19,28 +20,28 @@ public class RolDaoImpl implements RolDao{
 	public int create(Rol r) {
 		String sql = "insert into rol(nomrol) values(?)";
 		
-		return jdbctemplate.update(sql,r.getNombre());
+		return jdbctemplate.update(sql,r.getNomrol());
 	}
 
 	@Override
 	public int update(Rol r) {
 		// TODO Auto-generated method stub
 		String sql = "update rol set nomrol = ? where idrol = ?";
-		return jdbctemplate.update(sql,r.getNombre(), r.getIdrol());
+		return jdbctemplate.update(sql,r.getNomrol(), r.getIdrol());
 	}
 
 	@Override
-	public int delete(Rol r) {
+	public int delete(int id) {
 		// TODO Auto-generated method stub
 		String sql = "delete from rol where idrol = ?";
-		return jdbctemplate.update(sql,r.getIdrol());
+		return jdbctemplate.update(sql, id);
 	}
 
 	@Override
 	public Rol read(int id) {
 		// TODO Auto-generated method stub
-		String sql = "select * from rol where idrol = ?";
-		return jdbctemplate.queryForObject(sql, Rol.class);
+		String sql = "SELECT * FROM rol WHERE idrol = ?";
+		return jdbctemplate.queryForObject(sql, new Object[] {id}, new BeanPropertyRowMapper<Rol>(Rol.class));
 	}
 
 	@Override
