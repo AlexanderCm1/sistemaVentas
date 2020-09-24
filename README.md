@@ -1,2 +1,2 @@
 # sysventas_EternalBlue
-victor y kevin
+victor ,kevin y reyna
