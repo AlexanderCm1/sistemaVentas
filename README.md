@@ -1,2 +1,2 @@
 # sysventas_EternalBlue
-victor ,kevin y reyna
+victor ,kevin y reyna 💘
