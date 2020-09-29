@@ -17,25 +17,25 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public int create(Usuario u) {
 		// TODO Auto-generated method stub
-		return 0;
+		return usuariodao.create(u);
 	}
 
 	@Override
 	public int update(Usuario u) {
 		// TODO Auto-generated method stub
-		return 0;
+		return usuariodao.update(u);
 	}
 
 	@Override
-	public int delete(Usuario u) {
+	public int delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return usuariodao.delete(id);
 	}
 
 	@Override
 	public Usuario read(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return usuariodao.read(id);
 	}
 
 	@Override

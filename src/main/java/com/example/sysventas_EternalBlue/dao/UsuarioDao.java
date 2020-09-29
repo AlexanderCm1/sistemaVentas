@@ -9,7 +9,7 @@ import com.example.sysventas_EternalBlue.entity.Usuario;
 public interface UsuarioDao {
 	int create(Usuario u);
 	int update(Usuario u);
-	int delete(Usuario u);
+	int delete(int id);
 	Usuario read(int id);
 	List<Map<String,Object>> readAll();
 }
