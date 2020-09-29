@@ -17,25 +17,25 @@ public class VentasServiceImpl implements VentasService {
 	@Override
 	public int create(Ventas v) {
 		// TODO Auto-generated method stub
-		return 0;
+		return ventasdao.create(v);
 	}
 
 	@Override
 	public int update(Ventas v) {
 		// TODO Auto-generated method stub
-		return 0;
+		return ventasdao.update(v);
 	}
 
 	@Override
-	public int delete(Ventas v) {
+	public int delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return ventasdao.delete(id);
 	}
 
 	@Override
 	public Ventas read(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return ventasdao.read(id);
 	}
 
 	@Override

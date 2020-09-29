@@ -17,16 +17,22 @@ import com.example.sysventas_EternalBlue.entity.Ventas;
 class SysventasEternalBlueApplicationTests {
 	@Autowired
 	
-	private RolDao rolDao;
 	
+	private VentasDao ventasdao;
 	@Test
 	void contextLoads() {
-	
+		Ventas v = new Ventas();
 		//Rol r = new Rol();
 	//	r.setNombre("Gerente");
 		//System.out.println(rolDao.delete(3));
 		
-		System.out.println(rolDao.read(2).getNomrol());
+		v.setFecha("10/01/2020");
+		v.setTipodoc("RUC");
+		v.setNumdoc("12345678");
+		v.setIdpersona(4);
+		v.setIdcliente(4);
+		
+		System.out.println(ventasdao.create(v));
 		
 	}
 

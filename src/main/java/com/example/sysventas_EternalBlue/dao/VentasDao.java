@@ -9,7 +9,7 @@ import com.example.sysventas_EternalBlue.entity.Ventas;
 public interface VentasDao {
 	int create(Ventas v);
 	int update(Ventas v);
-	int delete(Ventas v);
+	int delete(int id);
 	Ventas read(int id);
 	List<Map<String,Object>> readAll();
 }
