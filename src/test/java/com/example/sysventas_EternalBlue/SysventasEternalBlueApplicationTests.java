@@ -33,6 +33,16 @@ class SysventasEternalBlueApplicationTests {
 		System.out.println(personaDao.create(p));
 		*/
 		System.out.println(rolDao.read(2).getNomrol());
+		
+		System.out.println(productoDao.read(1).getNomprod());
+		System.out.println(personaDao.read(2).getNombres());
+		
+		
+		Persona p = new Persona(2, "Kevins", "Apps", "334443");
+		personaDao.update(p);
+		
+		
+		
 		/*
 		Producto pro = new Producto();
 		pro.setNomprod("Dildo");

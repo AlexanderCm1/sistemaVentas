@@ -17,25 +17,24 @@ public class PersonaServiceImpl implements PersonaService{
 	@Override
 	public int create(Persona p) {
 		
-		return 0;
+		return personaDao.create(p);
 	}
 
 	@Override
 	public int update(Persona p) {
 		// TODO Auto-generated method stub
-		return 0;
+		return personaDao.update(p);
 	}
 
 	@Override
 	public int delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return personaDao.delete(id);
 	}
 
 	@Override
 	public Persona read(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return personaDao.read(id);
 	}
 
 	@Override

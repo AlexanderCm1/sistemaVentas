@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -40,7 +41,7 @@ public class PersonaDaoImpl implements PersonaDao{
 
 		String sql = "select * from persona where idpersona=?";
 		
-		return jdbcTemplate.queryForObject(sql, Persona.class);
+		return jdbcTemplate.queryForObject(sql, new Object[] {id}, new BeanPropertyRowMapper<Persona>(Persona.class));
 	}
 
 	@Override

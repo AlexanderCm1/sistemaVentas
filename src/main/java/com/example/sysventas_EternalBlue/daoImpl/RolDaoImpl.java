@@ -46,7 +46,6 @@ public class RolDaoImpl implements RolDao{
 
 	@Override
 	public List<Map<String, Object>> readAll() {
-		
 		String sql = "select * from rol";
 		return jdbcTemplate.queryForList(sql);
 	}

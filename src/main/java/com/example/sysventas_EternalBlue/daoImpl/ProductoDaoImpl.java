@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -38,7 +39,7 @@ public class ProductoDaoImpl implements ProductoDao{
 	@Override
 	public Producto read(int id) {
 		String sql = "select * from producto where idproducto=?";
-		return jdbcTemplate.queryForObject(sql, Producto.class);
+		return jdbcTemplate.queryForObject(sql, new Object[] {id},new BeanPropertyRowMapper<Producto>(Producto.class));
 	}
 
 	@Override

@@ -18,25 +18,25 @@ public class ProductoServiceImpl implements ProductoService{
 	@Override
 	public int create(Producto p) {
 		// TODO Auto-generated method stub
-		return 0;
+		return productoDao.create(p);
 	}
 
 	@Override
 	public int update(Producto p) {
 		// TODO Auto-generated method stub
-		return 0;
+		return productoDao.update(p);
 	}
 
 	@Override
 	public int delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return productoDao.delete(id);
 	}
 
 	@Override
 	public Producto read(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return productoDao.read(id);
 	}
 
 	@Override
