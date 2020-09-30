@@ -17,25 +17,25 @@ public class Detalle_ventasServiceImpl implements Detalle_ventasService {
 	@Override
 	public int create(Detalle_ventas r) {
 		// TODO Auto-generated method stub
-		return 0;
+		return detalle_ventadao.create(r);
 	}
 
 	@Override
 	public int update(Detalle_ventas r) {
 		// TODO Auto-generated method stub
-		return 0;
+		return detalle_ventadao.update(r);
 	}
 
 	@Override
-	public int delete(Detalle_ventas r) {
+	public int delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return detalle_ventadao.delete(id);
 	}
 
 	@Override
 	public Detalle_ventas read(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return detalle_ventadao.read(id);
 	}
 
 	@Override
